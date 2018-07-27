@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="C:\Users\Adminl\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Adminl\.m2\repository\com\sun\jersey\jersey-core\1.8\jersey-core-1.8.jar;C:\Users\Adminl\.m2\repository\mysql\mysql-connector-java\5.1.6\mysql-connector-java-5.1.6.jar;C:\Users\Adminl\.m2\repository\com\sun\jersey\jersey-server\1.8\jersey-server-1.8.jar;C:\formation java\outils\eclipse\plugins\org.junit_4.12.0.v201504281640\junit.jar;target/test-classes;C:\Users\Adminl\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\formation java\outils\eclipse\plugins\org.hamcrest.core_1.3.0.v201303031735.jar;C:\Users\Adminl\.m2\repository\asm\asm\3.1\asm-3.1.jar" destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="fr.gtm.projetproxibanquev2ws.domaine,fr.gtm.projetproxibanquev2ws.dao,fr.gtm.projetproxibanquev2ws.service" source="1.5" sourcefiles="src/test/java/TestVirement.java" sourcepath="src/main/java;src/main/resources;src/test/java" splitindex="true" use="true" version="true"/>
+    </target>
+</project>

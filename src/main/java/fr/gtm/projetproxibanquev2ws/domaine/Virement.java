@@ -1,5 +1,9 @@
 package fr.gtm.projetproxibanquev2ws.domaine;
-
+/**
+ * L'objet Virement permet de contenir des éléments essentiels à un virement (numero de compte débiteur, numéros de compte créditeur)
+ * @author Zack & Aubin
+ *
+ */
 public class Virement {
 
 	// attributs
@@ -8,7 +12,14 @@ public class Virement {
 	private String numeroCompteDebiteur;
 	private String numeroCompteCrediteur;
 	private double montant;
-
+/**
+ * Constructeur de Virement, il permettra de mettre en base un virement entre deux compte
+ * @param idVirement
+ * @param dateVirement
+ * @param numeroCompteDebiteur
+ * @param numeroCompteCrediteur
+ * @param montant
+ */
 	// constructeur
 	public Virement(int idVirement, String dateVirement, String numeroCompteDebiteur, String numeroCompteCrediteur,
 			double montant) {
@@ -20,7 +31,13 @@ public class Virement {
 		this.montant = montant;
 	}
 
-	//surcharge constructeur sans id
+/**
+ * Surcharge du constructeur pour ignoré l'id qui sera généré dynamiquement en basede données
+ * @param dateVirement
+ * @param numeroCompteDebiteur
+ * @param numeroCompteCrediteur
+ * @param montant
+ */
 	public Virement(String dateVirement, String numeroCompteDebiteur, String numeroCompteCrediteur, double montant) {
 		super();
 		this.dateVirement = dateVirement;

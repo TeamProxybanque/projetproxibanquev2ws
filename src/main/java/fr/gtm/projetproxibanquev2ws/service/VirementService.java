@@ -5,8 +5,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import javax.ws.rs.core.Response;
@@ -17,11 +19,14 @@ import fr.gtm.projetproxibanquev2ws.domaine.Compte;
 import fr.gtm.projetproxibanquev2ws.domaine.CompteCourant;
 import fr.gtm.projetproxibanquev2ws.domaine.CompteEpargne;
 import fr.gtm.projetproxibanquev2ws.domaine.Virement;
-
+/**
+ * Web services permettant de générer un virement
+ * @author Zack & Aubin
+ *
+ */
 @Path("/virement")
 public class VirementService {
 
-	private boolean testVirement = false;
 	// mes objets dao
 	CompteCourantDAO compteCDAO = new CompteCourantDAO();
 	CompteEpargneDAO compteEDAO = new CompteEpargneDAO();
@@ -29,9 +34,14 @@ public class VirementService {
 	Date date = new Date();
 	DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy");
 	String dateVirement;
-	boolean test = false;
 
 	// Methode de virement
+	/**
+	 * Méthode POST permettant de consumer un document json contenant un objet Virement. La méthode traite le contenu de virement pour une implentation en base de données
+	 * @param virement
+	 * @return
+	 * @see Virement
+	 */
 	@POST
 	@Path("/post")
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -81,11 +91,16 @@ public class VirementService {
 
 	}
 	
-	@POST
-	@Path("/mypost")
-	@Consumes(MediaType.APPLICATION_JSON)
-	public Response postTest(String input) {
-	    System.out.println("Made it to POST: "+input);
-	    return Response.status(201).entity(input).build(); 
+	/**
+	 * Méthode GET de test permettant de controler le bon fonctionnement du servlet Jersey en affichant "Bonjour"
+	 * @return
+	 */
+	@GET
+	@Path("/get")
+	@Produces(MediaType.TEXT_HTML)
+	public String test() {
+		return "<html>Bonjour</html>";
 	}
+	
+	
 }
